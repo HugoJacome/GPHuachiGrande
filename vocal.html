@@ -1,0 +1,190 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAD Huachi Grande - Inicio</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --verde-gad: #007d45;
+      --amarillo-gad: #ffc107;
+      --gris-claro: #f2f2f2;
+    }
+
+    .navbar-custom {
+      background-color: var(--gris-claro);
+    }
+
+    .navbar-custom .nav-link {
+      color: var(--verde-gad);
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: var(--amarillo-gad);
+    }
+
+    .navbar-custom .navbar-brand img {
+      height: 40px;
+    }
+
+    .hero-carousel {
+      margin-top: 56px;
+    }
+
+    .hero-carousel img {
+      height: calc(100vh - 56px);
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: var(--verde-gad);
+      color: white;
+      padding: 1rem 0;
+    }
+
+    .estadistica-box {
+      background-color: var(--verde-gad);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .estadistica-box h2 {
+      color: var(--amarillo-gad);
+      font-size: 2.5rem;
+    }
+
+    .estadistica-box p {
+      margin-top: 0.25rem;
+    }
+
+    .icono {
+      color: var(--amarillo-gad);
+      font-size: 2rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      font-style: italic;
+      font-size: 1.25rem;
+      text-align: center;
+      margin-top: 2rem;
+      color: #007d45;
+    }
+
+    .img-shadow {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="autoridadesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Autoridades</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="presidente.html">Presidente</a></li>
+              <li><a class="dropdown-item" href="vocal.html">Vocal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="apoyo.html">Dptos. de Apoyo</a></li>
+          <li class="nav-item"><a class="nav-link" href="informate.html">Infórmate</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="autoridadesDropdown" role="button"
+              data-bs-toggle="dropdown">
+              Transparencia
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="transparencia-2023.html">2023</a></li>
+              <li><a class="dropdown-item" href="transparencia-2024.html">2024</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="rendicion.html">Rendición de Cuentas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Sección: Vicepresidenta -->
+  <section class="container my-5 pt-5 fade-in">
+
+    <h3 class="text-white bg-success p-2 mb-4">Ing. Lida Carolina Escobar - Vicepresidenta</h3>
+
+    <div class="row align-items-center">
+      <!-- Imagen -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <img src="assets/vice.jpg" alt="Ing. Lida Carolina Escobar" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Texto -->
+      <div class="col-md-7">
+        <p>
+          Lida Carolina Escobar, Ingeniera, es el vocal del Gobierno Parroquial Huachi Grande y dirige la
+          <strong>COMISIÓN DE PRODUCTIVIDAD Y SEGURIDAD ALIMENTARIA</strong>, entre sus atribuciones están las
+          siguientes:
+        </p>
+
+        <div class="border-start border-4 ps-3 mb-3" style="border-color: #0d6efd;">
+          <p class="mb-2">
+            Capacitar a los moradores de la parroquia en temas de producción agrícola y pecuaria para que desarrollen
+            buenas prácticas orgánicas y evitar el uso de pesticidas e insecticidas.
+          </p>
+        </div>
+
+        <div class="border-start border-4 ps-3" style="border-color: #0d6efd;">
+          <p class="mb-0">
+            Dotar de los implementos necesarios a las asociaciones de producción legalmente constituidas y promover la
+            unión de las organizaciones para desarrollar programas que permitan cambiar la matriz productiva y mejorar
+            sus condiciones económicas.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <h2 class="text-center text-success mb-5">Vocales</h2>
+  </section>
+
+
+  <footer class="text-center">
+    <div class="container">
+      <div class="mb-3">
+        <a href="https://www.facebook.com" class="btn btn-outline-light btn-sm mx-1" target="_blank"><i
+            class="bi bi-facebook"></i> Facebook</a>
+        <a href="https://www.twitter.com" class="btn btn-outline-light btn-sm mx-1" target="_blank"><i
+            class="bi bi-twitter-x"></i> X</a>
+        <a href="https://www.instagram.com" class="btn btn-outline-light btn-sm mx-1" target="_blank"><i
+            class="bi bi-instagram"></i> Instagram</a>
+        <a href="mailto:gphuachigrande@hotmail.com" class="btn btn-warning btn-sm mx-1"><i class="bi bi-envelope"></i>
+          Contáctenos</a>
+      </div>
+      <p class="mb-0">&copy; 2025 GAD Parroquial Huachi Grande. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
