@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transparencia 2024 - GAD Huachi Grande</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Estilos personalizados -->
+    <style>
+        :root {
+            --verde-gad: #007d45;
+            --amarillo-gad: #ffc107;
+        }
+
+        /* Encabezado de sección */
+        .section-title {
+            color: var(--verde-gad);
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Estilos para los botones del acordeón */
+        .accordion-button {
+            background-color: #f8f9fa;
+            color: var(--verde-gad);
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #e6f2ec;
+            color: #004c2a;
+        }
+
+        .accordion-body {
+            background-color: #ffffff;
+        }
+
+        /* Estilo de los enlaces a documentos */
+        .accordion-body a {
+            text-decoration: none;
+            color: #007d45;
+        }
+
+        .accordion-body a:hover {
+            text-decoration: underline;
+        }
+
+        :root {
+            --verde-gad: #007d45;
+            --amarillo-gad: #ffc107;
+            --gris-claro: #f2f2f2;
+        }
+
+        .navbar-custom {
+            background-color: var(--gris-claro);
+        }
+
+        .navbar-custom .nav-link {
+            color: var(--verde-gad);
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: var(--amarillo-gad);
+        }
+
+        .navbar-custom .navbar-brand img {
+            height: 40px;
+        }
+
+        .hero-carousel {
+            margin-top: 56px;
+        }
+
+        .hero-carousel img {
+            height: calc(100vh - 56px);
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: var(--verde-gad);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .estadistica-box {
+            background-color: var(--verde-gad);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .estadistica-box h2 {
+            color: var(--amarillo-gad);
+            font-size: 2.5rem;
+        }
+
+        .estadistica-box p {
+            margin-top: 0.25rem;
+        }
+
+        .icono {
+            color: var(--amarillo-gad);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body><!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Logo Huachi Grande"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Autoridades</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="presidente.html">Presidente</a></li>
+                            <li><a class="dropdown-item" href="vocal.html">Vocal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="apoyo.html">Dptos. de Apoyo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="informate.html">Infórmate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="autoridadesDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Transparencia
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="transparencia-2023.html">2023</a></li>
+                            <li><a class="dropdown-item" href="transparencia-2024.html">2024</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="rendicion.html">Rendición de Cuentas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container my-5 pt-5 fade-in">
+        <h1 class="text-center text-success">Transparencia 2024</h1>
+        <div class="accordion mt-4" id="accordionTransparencia">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading0">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                        Enero
+                    </button>
+                </h2>
+                <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/enero/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/enero/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/enero/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/enero/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/enero/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/enero/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/enero/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/enero/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/enero/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/enero/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/enero/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/enero/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/enero/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/enero/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/enero/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/enero/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/enero/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/enero/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/enero/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/enero/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/enero/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Febrero
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/febrero/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/febrero/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/febrero/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/C.pdf" target="_blank">C. Remuneración
+                                    mensual por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/D.pdf" target="_blank">D. Servicios, formas
+                                    de acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/E.pdf" target="_blank">E. Contratos
+                                    colectivos vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/K.pdf" target="_blank">K. Planes y programas
+                                    en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/L.pdf" target="_blank">L. Contratos de
+                                    crédito externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/M.pdf" target="_blank">M. Rendición de
+                                    cuentas a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/N.pdf" target="_blank">N. Viáticos, informes
+                                    de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/febrero/S.pdf" target="_blank">S. Resoluciones, actas
+                                    y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Marzo
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/marzo/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/marzo/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/marzo/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        Abril
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/abril/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/abril/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/abril/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/abril/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/abril/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/abril/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/abril/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/abril/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/abril/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/abril/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/abril/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/abril/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/abril/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/abril/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/abril/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/abril/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/abril/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/abril/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/abril/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/abril/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/abril/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Mayo
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/mayo/A1.pdf" target="_blank">A1. Organigrama</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/M.pdf" target="_blank">M. Rendición de cuentas a
+                                    la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/O.pdf" target="_blank">O. Responsable de atender
+                                    la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/mayo/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Junio
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/junio/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/junio/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/junio/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/junio/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/junio/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/junio/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/junio/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/junio/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/junio/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/junio/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/junio/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/junio/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/junio/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/junio/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/junio/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/junio/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/junio/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/junio/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/junio/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/junio/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/junio/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Julio
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/julio/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/julio/A2.pdf" target="_blank">A2. Base legal</a></li>
+                            <li><a href="assets/transparencia/2024/julio/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/julio/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/julio/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/julio/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/julio/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/julio/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/julio/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/julio/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/julio/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/julio/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/julio/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/julio/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/julio/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/julio/K.pdf" target="_blank">K. Planes y programas en
+                                    ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/julio/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/julio/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/julio/N.pdf" target="_blank">N. Viáticos, informes de
+                                    trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/julio/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/julio/S.pdf" target="_blank">S. Resoluciones, actas y
+                                    planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        Agosto
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/agosto/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/agosto/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/agosto/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/C.pdf" target="_blank">C. Remuneración mensual
+                                    por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/D.pdf" target="_blank">D. Servicios, formas de
+                                    acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/E.pdf" target="_blank">E. Contratos colectivos
+                                    vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/K.pdf" target="_blank">K. Planes y programas
+                                    en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/L.pdf" target="_blank">L. Contratos de crédito
+                                    externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/M.pdf" target="_blank">M. Rendición de cuentas
+                                    a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/N.pdf" target="_blank">N. Viáticos, informes
+                                    de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/agosto/S.pdf" target="_blank">S. Resoluciones, actas
+                                    y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        Septiembre
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/septiembre/A1.pdf" target="_blank">A1.
+                                    Organigrama</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/septiembre/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/B1.pdf" target="_blank">B1. Directorio de
+                                    la institución</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/B2.pdf" target="_blank">B2. Distributivo
+                                    de personal</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/C.pdf" target="_blank">C. Remuneración
+                                    mensual por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/D.pdf" target="_blank">D. Servicios,
+                                    formas de acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/E.pdf" target="_blank">E. Contratos
+                                    colectivos vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/G.pdf" target="_blank">G. Presupuesto de
+                                    la institución</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/J.pdf" target="_blank">J. Empresas y
+                                    personas que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/K.pdf" target="_blank">K. Planes y
+                                    programas en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/L.pdf" target="_blank">L. Contratos de
+                                    crédito externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/M.pdf" target="_blank">M. Rendición de
+                                    cuentas a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/N.pdf" target="_blank">N. Viáticos,
+                                    informes de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/septiembre/S.pdf" target="_blank">S. Resoluciones,
+                                    actas y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        Octubre
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/octubre/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/octubre/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/octubre/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/B1.pdf" target="_blank">B1. Directorio de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/C.pdf" target="_blank">C. Remuneración
+                                    mensual por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/D.pdf" target="_blank">D. Servicios, formas
+                                    de acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/E.pdf" target="_blank">E. Contratos
+                                    colectivos vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/J.pdf" target="_blank">J. Empresas y personas
+                                    que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/K.pdf" target="_blank">K. Planes y programas
+                                    en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/L.pdf" target="_blank">L. Contratos de
+                                    crédito externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/M.pdf" target="_blank">M. Rendición de
+                                    cuentas a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/N.pdf" target="_blank">N. Viáticos, informes
+                                    de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/octubre/S.pdf" target="_blank">S. Resoluciones, actas
+                                    y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        Noviembre
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/noviembre/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/noviembre/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/noviembre/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/B1.pdf" target="_blank">B1. Directorio de
+                                    la institución</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/C.pdf" target="_blank">C. Remuneración
+                                    mensual por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/D.pdf" target="_blank">D. Servicios, formas
+                                    de acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/E.pdf" target="_blank">E. Contratos
+                                    colectivos vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/J.pdf" target="_blank">J. Empresas y
+                                    personas que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/K.pdf" target="_blank">K. Planes y
+                                    programas en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/L.pdf" target="_blank">L. Contratos de
+                                    crédito externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/M.pdf" target="_blank">M. Rendición de
+                                    cuentas a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/N.pdf" target="_blank">N. Viáticos,
+                                    informes de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/noviembre/S.pdf" target="_blank">S. Resoluciones,
+                                    actas y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        Diciembre
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                    data-bs-parent="#accordionTransparencia">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="assets/transparencia/2024/diciembre/A1.pdf" target="_blank">A1. Organigrama</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/diciembre/A2.pdf" target="_blank">A2. Base legal</a>
+                            </li>
+                            <li><a href="assets/transparencia/2024/diciembre/A3.pdf" target="_blank">A3. Regulación y
+                                    procedimientos internos</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/A4.pdf" target="_blank">A4. Metas y
+                                    objetivos</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/B1.pdf" target="_blank">B1. Directorio de
+                                    la institución</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/B2.pdf" target="_blank">B2. Distributivo de
+                                    personal</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/C.pdf" target="_blank">C. Remuneración
+                                    mensual por puesto</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/D.pdf" target="_blank">D. Servicios, formas
+                                    de acceso, horarios de atención y otros</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/E.pdf" target="_blank">E. Contratos
+                                    colectivos vigentes, anexos y reformas</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/F1.pdf" target="_blank">F1. Formato de
+                                    solicitudes para trámites</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/F2.pdf" target="_blank">F2. Solicitudes de
+                                    acceso a la información pública</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/G.pdf" target="_blank">G. Presupuesto de la
+                                    institución</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/H.pdf" target="_blank">H. Resultados de
+                                    auditorías internas y gubernamentales</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/I.pdf" target="_blank">I. Procesos de
+                                    contratación</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/J.pdf" target="_blank">J. Empresas y
+                                    personas que han incumplido contratos con la institución</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/K.pdf" target="_blank">K. Planes y
+                                    programas en ejecución</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/L.pdf" target="_blank">L. Contratos de
+                                    crédito externo e interno</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/M.pdf" target="_blank">M. Rendición de
+                                    cuentas a la ciudadanía</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/N.pdf" target="_blank">N. Viáticos,
+                                    informes de trabajo y justificativos</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/O.pdf" target="_blank">O. Responsable de
+                                    atender la información púbica</a></li>
+                            <li><a href="assets/transparencia/2024/diciembre/S.pdf" target="_blank">S. Resoluciones,
+                                    actas y planes de desarrollo</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer con redes -->
+    <footer class="text-center mt-5">
+        <div class="container">
+            <div class="social-icons mb-2">
+                <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://x.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:gphuachigrande@hotmail.com"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 GAD Parroquial Huachi Grande. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
