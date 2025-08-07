@@ -87,6 +87,35 @@
     .img-shadow {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
+    /* Colores institucionales */
+    .bg-departamento {
+      background-color: #1f8a53;
+    }
+
+    .text-yellow {
+      color: #f5b041;
+    }
+
+    /* Estilo para pestañas verdes */
+    .custom-tabs .nav-link {
+      background-color: #1f8a53;
+      color: white;
+      border: 1px solid #145a38;
+      border-bottom: none;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+
+    .custom-tabs .nav-link.active {
+      background-color: #f5b041;
+      color: #1f1f1f;
+      font-weight: bold;
+    }
+
+    .custom-tabs {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 
@@ -134,7 +163,8 @@
     <div class="row align-items-center">
       <!-- Imagen -->
       <div class="col-md-5 mb-4 mb-md-0">
-        <img src="assets/vice.jpg" alt="Ing. Lida Carolina Escobar" class="img-fluid rounded shadow"  style="width: 350px; height: 450px; object-fit: cover;">
+        <img src="assets/vice.jpg" alt="Ing. Lida Carolina Escobar" class="img-fluid rounded shadow"
+          style="width: 350px; height: 450px; object-fit: cover;">
       </div>
 
       <!-- Texto -->
@@ -161,55 +191,275 @@
         </div>
       </div>
     </div>
-
-    <h2 class="text-center text-success mb-5">Vocales</h2>
   </section>
-  <!-- Sección tipo Card Horizontal con 3 elementos -->
-  <section class="container my-5">
-    <div class="row g-4">
+  <!-- SECCIÓN VOCALÍAS CON TABS -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" style="color: #085F2F; font-weight: bold; font-size: 2rem;">VOCALÍAS</h2>
 
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="d-flex border rounded shadow-sm p-3 h-100">
-          <img src="assets/card1.jpg" alt="Comisión 1" class="img-fluid rounded me-3"
-            style="width: 150px; height: 150px; object-fit: cover;">
-          <div>
-            <h5 class="fw-bold">Educación y Bienestar</h5>
-            <p class="mb-0">Promovemos actividades educativas y culturales para el desarrollo integral de nuestra
-              comunidad.</p>
+    <!-- NAV TABS con estilo verde -->
+    <ul class="nav nav-tabs custom-tabs" id="vocaliasTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="jacobo-tab" data-bs-toggle="tab" data-bs-target="#jacobo" type="button"
+          role="tab">Jacobo López</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mayra-tab" data-bs-toggle="tab" data-bs-target="#mayra" type="button"
+          role="tab">Mayra Villacís</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mery-tab" data-bs-toggle="tab" data-bs-target="#mery" type="button" role="tab">Mery
+          Salinas</button>
+      </li>
+    </ul>
+
+    <!-- CONTENIDO DE CADA TAB -->
+    <div class="tab-content border rounded-bottom p-4" id="vocaliasTabsContent">
+      <!-- Jacobo López -->
+      <div class="tab-pane fade show active" id="jacobo" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            VOCAL - Tnlgo. Jacobo López
+          </div>
+          <div class="card-body row">
+            <div class="col-md-3">
+              <img src="assets/vocal3.jpg" alt="Jacobo López" class="img-fluid rounded">
+            </div>
+            <div class="col-md-9">
+              <p>
+                Jacobo Israel López López, Tecnólogo en Mecánica Industrial, es el vicepresidente del Gobierno
+                Parroquial Huachi Grande y dirige la <strong>COMISIÓN DE GESTIÓN DE INFRAESTRUCTURA FÍSICA,
+                  EQUIPAMIENTOS Y ESPACIO PÚBLICOS</strong>, entre sus atribuciones están las siguientes:
+              </p>
+              <ul>
+                <li>Asumir las funciones de administrador de los contratos o de las obras del Gobierno Parroquial Huachi
+                  Grande.</li>
+                <li>Velar por que las obras se ejecuten de acuerdo a lo planeado, además de coordinar con los que
+                  participen en la etapa de construcción del proyecto.</li>
+                <li>Inspeccionar para que se realicen evaluaciones periódicas al proyecto y dar la autorización para el
+                  inicio de la obra o proyecto.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="d-flex border rounded shadow-sm p-3 h-100">
-          <img src="assets/card2.jpg" alt="Comisión 2" class="img-fluid rounded me-3"
-            style="width: 150px; height: 150px; object-fit: cover;">
-          <div>
-            <h5 class="fw-bold">Salud y Seguridad</h5>
-            <p class="mb-0">Coordinamos programas para asegurar el bienestar y tranquilidad de nuestros habitantes.</p>
+      <!-- Mayra Villacís -->
+      <div class="tab-pane fade" id="mayra" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            VOCAL - Ing. Mayra Villacís
+          </div>
+          <div class="card-body row">
+            <div class="col-md-3">
+              <img src="assets/vocal2.jpg" alt="Mayra Villacís" class="img-fluid rounded">
+            </div>
+            <div class="col-md-9">
+              <p>
+                Mayra Villacís Núñez, Ingeniera, es el vocal del Gobierno Parroquial Huachi Grande y dirige la
+                <strong>COMISIÓN DE SEGURIDAD, SALUD, Y GESTIÓN AMBIENTAL</strong>, y la <strong>COMISIÓN DE GESTIÓN DE
+                  CALIDAD DE SERVICIO Y DESARROLLO INSTITUCIONAL</strong>, entre sus atribuciones están las siguientes:
+              </p>
+              <ul>
+                <li>Coordinar programas de seguridad con las instituciones respectivas para trabajar en pos de una
+                  parroquia segura, a través de acciones que permitan evitar la alteración del orden público, resguardar
+                  los bienes de los ciudadanos y promover un ambiente de paz entre las personas.</li>
+                <li>Evaluar las políticas de eficiencia de la institución y tomar las correcciones en el caso de ser
+                  necesarias, además de coordinar la planificación estratégica de la parroquia para controlar el diseño,
+                  ejecución o reestructuración de proyectos.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="d-flex border rounded shadow-sm p-3 h-100">
-          <img src="assets/card3.jpg" alt="Comisión 3" class="img-fluid rounded me-3"
-            style="width: 150px; height: 150px; object-fit: cover;">
-          <div>
-            <h5 class="fw-bold">Obras Públicas</h5>
-            <p class="mb-0">Supervisamos obras de infraestructura para garantizar su correcta ejecución y beneficio
-              ciudadano.</p>
+      <!-- Mery Salinas -->
+      <div class="tab-pane fade" id="mery" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            VOCAL - Ing. Mery Salinas
+          </div>
+          <div class="card-body row">
+            <div class="col-md-3">
+              <img src="assets/vocal1.jpg" alt="Mery Salinas" class="img-fluid rounded">
+            </div>
+            <div class="col-md-9">
+              <p>
+                Mery Oliva Salinas Balladares, Ingeniera en Administración de Empresas, es el vocal del Gobierno
+                Parroquial Huachi Grande y dirige la <strong>COMISIÓN DE EDUCACIÓN, CULTURA, DEPORTE Y BIENESTAR
+                  SOCIAL</strong>, en coordinación con la <strong>COMISIÓN DE MESA DE IGUALDAD Y GÉNERO</strong>, entre
+                sus atribuciones están las siguientes:
+              </p>
+              <ul>
+                <li>Coordinar proyectos, programas y actividades con instituciones públicas y privadas que permitan
+                  mejorar la calidad de vida en las áreas de educación, desarrollo social e igualdad de género.</li>
+                <li>Desarrollar programas de autogestión para el mantenimiento de los equipos que se ocupan dentro del
+                  área de desarrollo social, además de incentivar a la población a desarrollar actividades lúdicas,
+                  educativas, culturales y deportivas.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-    
-    <h2 class="text-center mb-4">Nuestras Comisiones</h2>
   </section>
+  <!-- SECCIÓN DEPARTAMENTO TÉCNICO CON TABS -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" style="color: #085F2F; font-weight: bold; font-size: 2rem;">DEPARTAMENTO TÉCNICO</h2>
+
+    <!-- NAV TABS con estilo verde -->
+    <ul class="nav nav-tabs custom-tabs" id="departamentoTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="financiero-tab" data-bs-toggle="tab" data-bs-target="#financiero"
+          type="button" role="tab">Financiero</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="secretaria-tab" data-bs-toggle="tab" data-bs-target="#secretaria" type="button"
+          role="tab">Secretaría</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="social-tab" data-bs-toggle="tab" data-bs-target="#social" type="button"
+          role="tab">Social</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mantenimiento-tab" data-bs-toggle="tab" data-bs-target="#mantenimiento"
+          type="button" role="tab">Mantenimiento</button>
+      </li>
+    </ul>
+
+    <!-- CONTENIDO DE CADA TAB -->
+    <div class="tab-content border rounded-bottom p-4" id="departamentoTabsContent">
+      <!-- Financiero -->
+      <div class="tab-pane fade show active" id="financiero" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            DEPARTAMENTO FINANCIERO - Ing. Raquel Judith Pantoja Chicaiza
+          </div>
+          <div class="card-body row">
+            <div class="col-md-5">
+              <img src="assets/financiero.jpg" alt="Financiero" class="img-fluid rounded">
+            </div>
+            <div class="col-md-7">
+              <p>
+                Este departamento está bajo la dirección de la Ingeniera en Contabilidad y Auditoria Raquel Judith
+                Pantoja Chicaiza miembro del Gobierno Parroquial de Huachi Grande, entre sus funciones administrativas
+                se encuentra lo siguiente:
+              </p>
+              <blockquote class="blockquote text-center">
+                <p class="fst-italic">...Llevar los informes financieros con responsabilidad...</p>
+              </blockquote>
+              <p>
+                Llevar los libros contables del Gobierno Parroquial con eficiencia y a su vez tener pleno conocimiento
+                sobre el presupuesto financiero de la institución tanto en ingresos y egresos.
+                <br><br>
+                Trabajar de la mano con las autoridades de la parroquia para señalar la opción financiera más rentable
+                al momento de diseñar el presupuesto de los proyectos.
+                <br><br>
+                Formular esquemas de control financiero apegado al modelo del gestión del Gobierno Parroquial para
+                planificar y organizar las actividades financieras de la institución.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secretaría -->
+      <div class="tab-pane fade" id="secretaria" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            DEPARTAMENTO DE SECRETARÍA - Ing. Myriam Mayorga
+          </div>
+          <div class="card-body row">
+            <div class="col-md-5">
+              <img src="assets/secretaria.jpg" alt="Secretaría" class="img-fluid rounded">
+            </div>
+            <div class="col-md-7">
+              <p>
+                Este departamento está bajo la dirección de la Ing. Myriam Mayorga, miembro del Gobierno Parroquial de
+                Huachi Grande, entre sus funciones administrativas se encuentra lo siguiente:
+              </p>
+              <blockquote class="blockquote text-center">
+                <p class="fst-italic">...Organizar la documentación importante de la parroquia ...</p>
+              </blockquote>
+              <p>
+                Elaborar todos los documentos necesarios para las diferentes gestiones que articula la parroquia con
+                las entidades públicas y privadas, además de prestar la atención necesaria al ciudadano en cualquier
+                proceso que necesite.
+                <br><br>
+                Llevar con responsabilidad los documentos importantes y legales del Gobierno Parroquial, estos deben
+                ser manejados bajo políticas de administración para evitar inconvenientes con Contraloría a futuro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="tab-pane fade" id="social" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            DEPARTAMENTO TÉCNICO DE PROYECTO SOCIAL - Téc. Marco Ramírez
+          </div>
+          <div class="card-body row">
+            <div class="col-md-5">
+              <img src="assets/tecnico.jpg" alt="Proyecto Social" class="img-fluid rounded">
+            </div>
+            <div class="col-md-7">
+              <p>
+                Este departamento está bajo la dirección del técnico Marco Ramírez, miembro del Gobierno Parroquial de
+                Huachi Grande, entre sus funciones administrativas se encuentra lo siguiente:
+              </p>
+              <blockquote class="blockquote text-center">
+                <p class="fst-italic">...Realizar autogestión con entidades públicas y de cooperación internacional...
+                </p>
+              </blockquote>
+              <p>
+                Realizar autogestión con entidades públicas y de cooperación internacional para buscar apoyo y
+                financiar los proyectos sociales que van en beneficio de adultos mayores, mujeres embarazadas,
+                personas con discapacidad, jóvenes y niños.
+                <br><br>
+                Desarrollar talleres con cada uno de los grupos vulnerables que les permita conocer cuáles son sus
+                derechos y través de ello erradicar los índices de violencias que sufren estos grupos al no ser
+                atendidos como prioritarios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mantenimiento -->
+      <div class="tab-pane fade" id="mantenimiento" role="tabpanel">
+        <div class="card border-success mb-3">
+          <div class="card-header bg-success fw-bold text-center text-white">
+            DEPARTAMENTO DE MANTENIMIENTO Y LIMPIEZA - Sr. Nestor Acosta
+          </div>
+          <div class="card-body row">
+            <div class="col-md-5">
+              <img src="assets/mantenimiento.jpg" alt="Mantenimiento" class="img-fluid rounded">
+            </div>
+            <div class="col-md-7">
+              <p>
+                Este departamento está bajo la dirección de Nestor Acosta, miembro del Gobierno Parroquial de Huachi
+                Grande, entre sus funciones se encuentra lo siguiente:
+              </p>
+              <blockquote class="blockquote text-center">
+                <p class="fst-italic">..."Mantener bonito a su Huachi"...</p>
+              </blockquote>
+              <p>
+                Don Nestor como le conocen en su parroquia, dice que se encarga de "Mantener bonito a su Huachi", él
+                es el hombre que mantiene limpio la parte central de la parroquia, su escoba, pala y carretilla son
+                sus compañeras infalibles de trabajo, las que le acompañaba en el día a día.
+                <br><br>
+                Además se encarga de dar mantenimiento al edificio del Gobierno Parroquial y que los baños de la
+                cancha central se mantengan limpios e impecables para que visitantes y moradores los usen sin
+                inconvenientes y puedan disfrutar de sus instalaciones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <footer class="text-center">
