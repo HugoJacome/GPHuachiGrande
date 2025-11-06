@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAD Huachi Grande - Noticias</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Ajustes suaves coherentes con styles.css */
+        .page-hero {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url('assets/banner.jpg') center/cover no-repeat;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+        }
+
+        .cat-pill {
+            cursor: pointer;
+        }
+
+        .news-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .badge-cat {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (igual al index) -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="autoridadesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Autoridades</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="presidente.html">Presidente</a></li>
+                            <li><a class="dropdown-item" href="vocal.html">Vocal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="transparenciaDropdown" role="button"
+                            data-bs-toggle="dropdown">Transparencia</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="transparencia-2025.html">2025</a></li>
+                            <li><a class="dropdown-item" href="transparencia-2024.html">2024</a></li>
+                            <li><a class="dropdown-item" href="transparencia-2023.html">2023</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="rendicionDropdown" role="button"
+                            data-bs-toggle="dropdown">Rendición de Cuentas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="rendicion-2024.html">2024</a></li>
+                            <li><a class="dropdown-item" href="rendicion-2023.html">2023</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="page-hero mt-5 pt-4">
+        <div class="container text-center">
+            <h1 class="display-6 fw-semibold">Huachi Grande Informa</h1>
+            <p class="text-white-50 mb-0">Actualidad, obras y proyectos de nuestra parroquia</p>
+        </div>
+    </header>
+
+    <!-- Categorías -->
+    <section class="container my-4">
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <span class="badge rounded-pill text-bg-success cat-pill" data-cat="Todas"><i class="bi bi-grid"></i>
+                Todas</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Infraestructura"><i
+                    class="bi bi-building"></i> Infraestructura</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Social"><i
+                    class="bi bi-people"></i> Social</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Cultura"><i
+                    class="bi bi-bank2"></i> Cultura</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Ambiente"><i
+                    class="bi bi-tree"></i> Ambiente</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Producción"><i
+                    class="bi bi-gear"></i> Producción</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Hábitat"><i
+                    class="bi bi-house-heart"></i> Hábitat</span>
+            <span class="badge rounded-pill text-bg-light border cat-pill" data-cat="Tecnología"><i
+                    class="bi bi-cpu"></i> Tecnología</span>
+        </div>
+    </section>
+
+    <!-- Grid de noticias -->
+    <main class="container my-4">
+        <div id="newsGrid" class="row g-4">
+            <!-- Cards generadas por JS -->
+        </div>
+    </main>
+
+    <!-- Modal Noticia -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="newsTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <img id="newsImage" src="" alt="" class="img-fluid rounded mb-3" />
+                    <div id="newsContent" class="lead"></div>
+                </div>
+                <div class="modal-footer border-0">
+                    <span id="newsMeta" class="text-muted me-auto small"></span>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="mb-3">
+                <a href="https://www.facebook.com/gad.huachi.grande" class="btn btn-outline-light btn-sm mx-1"
+                    target="_blank">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="mailto:gphuachigrande@hotmail.com" class="btn btn-warning btn-sm mx-1">
+                    <i class="bi bi-envelope"></i> Contáctenos
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2025 GAD Parroquial Huachi Grande. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const NEWS = [
+            {
+                id: "mejoramiento-vial",
+                titulo: "Mejoramiento Vial en las calles Montana, Alabama y Alaska",
+                categoria: "Infraestructura",
+                imagen: "assets/news/mejoramiento-vial.jpg",
+                resumen: "Actualmente se encuentra intervenida la calle Montana, Alabama y Alaska por trabajos de mejoramiento vial, obra ejecutada por parte del Gobierno Municipal de Ambato.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande informa que actualmente se encuentran intervenidas las calles <strong>Montana, Alabama y Alaska</strong> por trabajos de mejoramiento vial, una obra ejecutada por parte del <strong>Gobierno Municipal de Ambato</strong>.</p>
+      <p>Estos trabajos forman parte del compromiso de mejorar la infraestructura vial de la parroquia, optimizando la movilidad y garantizando la seguridad de los moradores.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "cursos-gratuitos",
+                titulo: "¡A Jugar y Aprender! Cursos Gratuitos de Fútbol y Básquet",
+                categoria: "Cultura",
+                imagen: "assets/news/cursos-deportivos.jpg",
+                resumen: "El GAD Parroquial de Huachi Grande y el GAD Municipal de Ambato invitan a niños y jóvenes a inscribirse en los cursos deportivos 2025.",
+                contenido: `
+      <p>El Gobierno Parroquial de Huachi Grande, en coordinación con el Gobierno Municipal de Ambato, invita a niños, niñas y jóvenes a inscribirse en los <strong>Cursos Deportivos 2025</strong> de fútbol y básquet.</p>
+      <p>Las inscripciones estarán abiertas desde el <strong>27 al 31 de octubre de 2025</strong>. Los requisitos son copia de la cédula del niño o niña y copia de la cédula del representante legal.</p>
+      <p>¡No pierdas esta oportunidad de fomentar el deporte, la disciplina y la vida saludable!</p>
+    `,
+                fecha: "Octubre 2025"
+            },
+            {
+                id: "esterilizacion",
+                titulo: "Campaña de Esterilización Gratuita junto a la UTA",
+                categoria: "Ambiente",
+                imagen: "assets/news/esterilizacion.jpg",
+                resumen: "Iniciativa interinstitucional con la Universidad Técnica de Ambato para el bienestar animal en Huachi Grande. Jornada: 28 de noviembre 2025.",
+                contenido: `
+      <p>El Gobierno Parroquial de Huachi Grande anuncia el lanzamiento de su campaña anual de <strong>esterilización gratuita</strong> para perros y gatos, en alianza con la <strong>Universidad Técnica de Ambato (UTA)</strong>.</p>
+      <p>Este proyecto, que se ejecuta por segundo año consecutivo, tiene como objetivo el control poblacional y el bienestar animal en la parroquia.</p>
+      <p>La actividad se llevará a cabo el <strong>28 de noviembre de 2025</strong> y las inscripciones se receptarán en la Secretaría del GAD Parroquial.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "brilla-mujer",
+                titulo: "Proyecto ‘Brilla Mujer’: Emprendimiento Femenino Navideño",
+                categoria: "Producción",
+                imagen: "assets/news/brilla-mujer.jpg",
+                resumen: "El GAD Parroquial impulsa el emprendimiento femenino con talleres manuales y creativos orientados a la temporada navideña.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande anuncia el lanzamiento del proyecto <strong>“Brilla Mujer”</strong>, una iniciativa diseñada para impulsar el emprendimiento femenino y generar ingresos en la temporada de fin de año.</p>
+      <p>Durante los meses de <strong>noviembre y diciembre</strong>, el proyecto se centrará en actividades manuales y creativas orientadas a la época navideña, brindando herramientas productivas a las participantes.</p>
+      <p>Las inscripciones se receptarán en las oficinas del GAD Parroquial de Huachi Grande.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "danza-permanente",
+                titulo: "Proyecto de Danza Permanente: Folclor y Contemporáneo",
+                categoria: "Cultura",
+                imagen: "assets/news/danza.jpg",
+                resumen: "Iniciativa cultural dirigida a niños y jóvenes con talleres de danza folclórica y contemporánea para fomentar el arte local.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande ejecuta el proyecto <strong>Danza Permanente</strong>, orientado al desarrollo artístico y cultural de la juventud.</p>
+      <p>Se imparten talleres en dos disciplinas:</p>
+      <ul>
+        <li><strong>Danza Folclórica:</strong> preservación de las tradiciones locales.</li>
+        <li><strong>Danza Contemporánea:</strong> exploración de nuevas formas de expresión.</li>
+      </ul>
+      <p>El objetivo es brindar oportunidades de formación y expresión cultural a niños y jóvenes desde sus primeros años.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "cumplimiento-planificacion",
+                titulo: "Cumplimiento y Planificación de Obras",
+                categoria: "Infraestructura",
+                imagen: "assets/news/planificacion.jpg",
+                resumen: "El GAD Parroquial reafirma su compromiso con la ejecución eficiente de obras conforme a la planificación institucional.",
+                contenido: `
+      <p>Reafirmamos nuestro compromiso de seguir trabajando con eficiencia. Todas las obras en curso se están ejecutando de acuerdo con lo planificado por la institución, garantizando la optimización de los recursos y el cumplimiento de los plazos establecidos.</p>
+      <p>¡Seguimos transformando nuestra parroquia con obras que perduran!</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "parque-central",
+                titulo: "Remodelación del Parque Central de Huachi Grande",
+                categoria: "Infraestructura",
+                imagen: "assets/news/parque-central.jpg",
+                resumen: "Intervención del Parque Central con nuevos juegos infantiles y biosaludables, creando un espacio moderno y seguro.",
+                contenido: `
+      <p>El Gobierno Parroquial de Huachi Grande anuncia el inicio de la intervención de su <strong>Parque Central</strong>, con la instalación de nuevos juegos infantiles y biosaludables.</p>
+      <p>Esta obra busca ofrecer a la comunidad un espacio renovado, seguro y moderno para el disfrute familiar.</p>
+      <p>¡Agradecemos la comprensión de la ciudadanía durante el proceso de remodelación!</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "mantenimiento-edificio",
+                titulo: "Mantenimiento del Edificio del GAD Parroquial",
+                categoria: "Infraestructura",
+                imagen: "assets/news/edificio-gad.jpg",
+                resumen: "Inician los trabajos de mantenimiento del edificio administrativo para mejorar las instalaciones y atención al público.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande informa el inicio de los trabajos de <strong>mantenimiento del edificio administrativo</strong>, con el objetivo de mejorar las instalaciones y brindar un mejor servicio a la ciudadanía.</p>
+      <p>Se solicita comprensión por las molestias temporales que puedan generarse durante las labores.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "obras-finalizadas",
+                titulo: "Obras Finalizadas y Entregadas a la Ciudadanía",
+                categoria: "Infraestructura",
+                imagen: "assets/news/obras-entregadas.jpg",
+                resumen: "El GAD Parroquial presenta obras culminadas que mejoran la calidad de vida y el entorno urbano de Huachi Grande.",
+                contenido: `
+      <p>La actual administración del GAD Parroquial de Huachi Grande informa sobre los importantes avances en infraestructura y espacios públicos.</p>
+      <p>Se han culminado y entregado con éxito proyectos esenciales que benefician a la ciudadanía:</p>
+      <ul>
+        <li><strong>Regeneración Integral del Barrio Sagrado Corazón de Jesús:</strong> transformación de espacios públicos y mejora de infraestructura.</li>
+        <li><strong>Regeneración del Barrio La Palestina:</strong> rehabilitación del área infantil y construcción de muro de contención.</li>
+      </ul>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "contenedores",
+                titulo: "Colocación de Contenedores de Basura",
+                categoria: "Ambiente",
+                imagen: "assets/news/contenedores.jpg",
+                resumen: "El GAD Parroquial coloca contenedores de basura de 1100 litros en puntos estratégicos, mejorando la gestión de desechos.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande culminó la colocación de <strong>contenedores de basura de 1100 litros</strong> en diferentes sectores de la parroquia.</p>
+      <p>Esta acción mejora la gestión de desechos y la salubridad, permitiendo un almacenamiento temporal y organizado.</p>
+      <p>Desde el próximo mes se iniciará el mantenimiento periódico de los contenedores instalados.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "fomento-productivo",
+                titulo: "Apoyo al Sector Productivo y Entrega de Beneficios",
+                categoria: "Producción",
+                imagen: "assets/news/fomento-productivo.jpg",
+                resumen: "El GAD Parroquial fortalece el trabajo de los agricultores con verificación de ayudas y visitas de intercambio de experiencias.",
+                contenido: `
+      <p>Durante este mes, el GAD Parroquial de Huachi Grande ha intensificado su apoyo al sector productivo.</p>
+      <p>Entre las acciones realizadas destacan:</p>
+      <ul>
+        <li><strong>Entrega y verificación de beneficios:</strong> visitas en territorio para supervisar los proyectos entregados.</li>
+        <li><strong>Intercambio de experiencias:</strong> visitas de agricultores a otras localidades para conocer prácticas exitosas.</li>
+      </ul>
+      <p>Estas iniciativas fortalecen las capacidades de nuestros productores locales.</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "alegria-de-vivir",
+                titulo: "Proyecto Social ‘Alegría de Vivir’ para Adultos Mayores",
+                categoria: "Social",
+                imagen: "assets/news/alegria-de-vivir.jpg",
+                resumen: "Atención médica y fortalecimiento cognitivo para 114 adultos mayores de la parroquia Huachi Grande.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande atiende a <strong>114 adultos mayores</strong> con el proyecto social denominado <strong>“Alegría de Vivir”</strong>.</p>
+      <p>Este programa se ha enfocado en la atención médica y en los próximos meses reforzará las actividades cognitivas y de destrezas.</p>
+      <p>¡Comprometidos con la dignidad y alegría de nuestros adultos mayores!</p>
+    `,
+                fecha: "Noviembre 2025"
+            },
+            {
+                id: "sembrando-valores",
+                titulo: "Proyecto Juvenil ‘Sembrando Valores’",
+                categoria: "Educación",
+                imagen: "assets/news/sembrando-valores.jpg",
+                resumen: "Formación de jóvenes líderes con charlas motivacionales y colaboración interinstitucional.",
+                contenido: `
+      <p>El GAD Parroquial de Huachi Grande impulsa el proyecto <strong>“Sembrando Valores”</strong>, orientado a la formación de la juventud parroquial.</p>
+      <p>Participan <strong>32 jóvenes</strong> en actividades como:</p>
+      <ul>
+        <li>Charlas motivacionales.</li>
+        <li>Capacitaciones en liderazgo y valores.</li>
+        <li>Colaboración interinstitucional para el desarrollo personal y social.</li>
+      </ul>
+      <p>El objetivo es formar jóvenes líderes comprometidos con los principios constitucionales y la participación ciudadana.</p>
+    `,
+                fecha: "Noviembre 2025"
+            }
+        ];
+
+
+        // === Render de cards ===
+        const grid = document.getElementById('newsGrid');
+        function cardTemplate(n) {
+            return `
+        <div class="col-12 col-sm-6 col-lg-4" data-cat="${n.categoria}">
+          <div class="card news-card h-100 shadow-sm border-0">
+            <img src="${n.imagen}" class="card-img-top" alt="${n.titulo}">
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-success-subtle text-success border badge-cat mb-2"><i class="bi bi-tag"></i> ${n.categoria}</span>
+              <h5 class="card-title">${n.titulo}</h5>
+              <p class="card-text text-muted mb-3">${n.resumen}</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <small class="text-muted"><i class="bi bi-calendar-event"></i> ${n.fecha}</small>
+                <button class="btn btn-success btn-sm" data-open="${n.id}">
+                  <i class="bi bi-journal-text"></i> Leer más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>`;
+        }
+        function renderCards(list = NEWS) {
+            grid.innerHTML = list.map(cardTemplate).join('');
+            // Wire buttons
+            grid.querySelectorAll('[data-open]').forEach(btn => {
+                btn.addEventListener('click', (e) => openNews(e.currentTarget.getAttribute('data-open')));
+            });
+        }
+        renderCards();
+
+        // === Modal ===
+        const modalEl = document.getElementById('newsModal');
+        const modal = new bootstrap.Modal(modalEl);
+        function openNews(id) {
+            const n = NEWS.find(x => x.id === id);
+            if (!n) return;
+            document.getElementById('newsTitle').textContent = n.titulo;
+            document.getElementById('newsImage').src = n.imagen;
+            document.getElementById('newsImage').alt = n.titulo;
+            document.getElementById('newsContent').innerHTML = n.contenido;
+            document.getElementById('newsMeta').textContent = `${n.categoria} · ${n.fecha}`;
+            modal.show();
+        }
+
+        // === Filtro por categoría ===
+        const pills = document.querySelectorAll('.cat-pill');
+        pills.forEach(p => p.addEventListener('click', () => {
+            pills.forEach(x => x.classList.remove('text-bg-success'));
+            pills.forEach(x => x.classList.remove('border-0'));
+            pills.forEach(x => x.classList.add('text-bg-light', 'border'));
+            p.classList.remove('text-bg-light', 'border');
+            p.classList.add('text-bg-success', 'border-0');
+
+            const cat = p.getAttribute('data-cat');
+            if (cat === 'Todas') {
+                renderCards(NEWS);
+            } else {
+                renderCards(NEWS.filter(n => n.categoria === cat));
+            }
+            window.scrollTo({ top: document.querySelector('.page-hero').offsetHeight - 20, behavior: 'smooth' });
+        }));
+
+        // (Opcional) abrir por hash ?id=…
+        const params = new URLSearchParams(location.search);
+        if (params.has('id')) {
+            setTimeout(() => openNews(params.get('id')), 300);
+        }
+    </script>
+</body>
+
+</html>
