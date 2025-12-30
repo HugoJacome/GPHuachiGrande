@@ -343,11 +343,19 @@
 
         // === Render de cards ===
         const grid = document.getElementById('newsGrid');
+        const FALLBACK_IMG = "assets/news/placeholder.jpg";
+
+        function safeImgTag(src, alt, className) {
+            return `<img src="${src}" class="${className}" alt="${alt}"
+                        loading="lazy"
+                        onerror="this.onerror=null;this.src='${FALLBACK_IMG}';">`;
+        }
+
         function cardTemplate(n) {
             return `
         <div class="col-12 col-sm-6 col-lg-4" data-cat="${n.categoria}">
           <div class="card news-card h-100 shadow-sm border-0">
-            <img src="${n.imagen}" class="card-img-top" alt="${n.titulo}">
+            ${safeImgTag(n.imagen, n.titulo, "card-img-top")}
             <div class="card-body d-flex flex-column">
               <span class="badge bg-success-subtle text-success border badge-cat mb-2"><i class="bi bi-tag"></i> ${n.categoria}</span>
               <h5 class="card-title">${n.titulo}</h5>
@@ -378,8 +386,13 @@
             const n = NEWS.find(x => x.id === id);
             if (!n) return;
             document.getElementById('newsTitle').textContent = n.titulo;
-            document.getElementById('newsImage').src = n.imagen;
-            document.getElementById('newsImage').alt = n.titulo;
+
+            const img = document.getElementById('newsImage');
+            img.src = n.imagen;
+            img.alt = n.titulo;
+            img.loading = "lazy";
+            img.onerror = function () { this.onerror = null; this.src = FALLBACK_IMG; };
+
             document.getElementById('newsContent').innerHTML = n.contenido;
             document.getElementById('newsMeta').textContent = `${n.categoria} · ${n.fecha}`;
             modal.show();
