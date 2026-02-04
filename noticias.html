@@ -34,6 +34,12 @@
         .badge-cat {
             font-weight: 600;
         }
+
+        /* Tabs por mes */
+        .month-pill {
+            cursor: pointer;
+            user-select: none;
+        }
     </style>
 </head>
 
@@ -87,6 +93,16 @@
         </div>
     </header>
 
+    <!-- Tabs por mes -->
+    <section class="container my-3">
+        <div id="monthTabs" class="d-flex flex-wrap gap-2 justify-content-center">
+            <!-- pills generadas por JS -->
+        </div>
+        <p id="monthHint" class="text-center text-muted small mt-2 mb-0" style="display:none;">
+            Mostrando hasta <strong>9</strong> noticias más recientes.
+        </p>
+    </section>
+
     <!-- Categorías -->
     <section class="container my-4">
         <div class="d-flex flex-wrap gap-2 justify-content-center">
@@ -113,6 +129,12 @@
     <main class="container my-4">
         <div id="newsGrid" class="row g-4">
             <!-- Cards generadas por JS -->
+        </div>
+
+        <div class="text-center mt-4" id="loadMoreWrap" style="display:none;">
+            <button class="btn btn-outline-success" id="btnLoadMore">
+                <i class="bi bi-plus-circle"></i> Ver más noticias
+            </button>
         </div>
     </main>
 
@@ -156,6 +178,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const NEWS = [
+            /* ======= EXISTENTES ======= */
             {
                 id: "mejoramiento-vial",
                 titulo: "Mejoramiento Vial en las calles Montana, Alabama y Alaska",
@@ -239,19 +262,6 @@
       `,
                 fecha: "Noviembre 2025"
             },
-            // {
-    //             id: "parque-central",
-    //             titulo: "Remodelación del Parque Central de Huachi Grande",
-    //             categoria: "Infraestructura",
-    //             imagen: "assets/news/parque-central.jpg",
-    //             resumen: "Intervención del Parque Central con nuevos juegos infantiles y biosaludables, creando un espacio moderno y seguro.",
-    //             contenido: `
-    //   <p>El Gobierno Parroquial de Huachi Grande anuncia el inicio de la intervención de su <strong>Parque Central</strong>, con la instalación de nuevos juegos infantiles y biosaludables.</p>
-    //   <p>Esta obra busca ofrecer a la comunidad un espacio renovado, seguro y moderno para el disfrute familiar.</p>
-    //   <p>¡Agradecemos la comprensión de la ciudadanía durante el proceso de remodelación!</p>
-    // `,
-    //             fecha: "Noviembre 2025"
-    //         },
             {
                 id: "mantenimiento-edificio",
                 titulo: "Mantenimiento del Edificio del GAD Parroquial",
@@ -340,13 +350,157 @@
       <p>El objetivo es formar jóvenes líderes comprometidos con los principios constitucionales y la participación ciudadana.</p>
     `,
                 fecha: "Noviembre 2025"
-            }
+            },
+
+            /* ======= NUEVAS (ENERO 2026) ======= */
+            {
+                id: "estadio-graderios",
+                titulo: "Adecuación de adoquines y recuperación de mallas en el Estadio Central",
+                categoria: "Infraestructura",
+                imagen: "assets/news/enero-2026/graderios.jpg",
+                resumen: "Entrega de obra en graderíos y recuperación de mallas de protección con sus respectivos muros.",
+                contenido: `
+      <p>El Gad Huachi Grande gracias al GAD Municipalidad de Ambato y a nuestra señora Alcaldesa la <strong>Ing. Diana Caiza</strong> entregan la obra de adecuación de adoquines en el área de los graderíos de espectadores, recuperación de las mallas de protección con sus respectivos muros en el estadio central de la parroquia.</p>
+      <p>Con esta obra ejecutada con nuestro presupuesto participativo municipal buscamos brindar a la colectividad un espacio adecuado para la práctica del deporte y el bienestar de los espectadores de tan noble disciplina como es el fútbol ⚽.</p>
+      <p>Aún queda mucho por hacer pero los grandes objetivos se cumplen paso a paso.</p>
+      <p><strong>El deporte también es nuestra prioridad</strong></p>
+      <p><strong>Huachi Grande queremos verte mejor 💛💚🤍</strong></p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "protesis-uniandes",
+                titulo: "Prótesis dentales gratuitas para adultos mayores (Convenio UNIANDES)",
+                categoria: "Social",
+                imagen: "assets/news/enero-2026/vinculacion.jpg",
+                resumen: "Convenio con Odontología de UNIANDES para dotación de prótesis dentales gratuitas.",
+                contenido: `
+      <p>El Gad Huachi Grande informa a la colectividad que continuamos brindando beneficios a nuestros grupos prioritarios, a través de nuestro convenio de vinculación a la sociedad con la carrera de Odontología de <strong>Uniandes</strong> coordinamos acciones para poder mejorar la calidad de vida de nuestros queridos adultos mayores con la dotación de <strong>prótesis dentales gratuitas</strong> en su favor.</p>
+      <p>🦷👨🏻‍⚕️👴🏻</p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "calle-tennessee",
+                titulo: "Inicio de trabajos de adecuación en la calle Tennessee (Manzana de Oro)",
+                categoria: "Infraestructura",
+                imagen: "assets/news/enero-2026/Tennessee.jpg",
+                resumen: "Trabajos mediante presupuesto participativo en coordinación con el GAD Municipalidad de Ambato.",
+                contenido: `
+      <p>El Gad Huachi Grande se complace en informar a la colectividad que en coordinación con el GAD Municipalidad de Ambato a través de la ejecución de nuestro presupuesto participativo iniciamos con los trabajos de adecuación en la <strong>calle Tennessee</strong> perteneciente al sector <strong>Manzana de Oro</strong>.</p>
+      <p>Pedimos a los moradores del sector circular con las precauciones del caso.</p>
+      <p><strong>Huachi Grande queremos verte mejor 💛💚🤍</strong></p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "cupos-esterilizacion",
+                titulo: "Cupos disponibles: jornada gratuita de esterilización de mascotas",
+                categoria: "Ambiente",
+                imagen: "assets/news/enero-2026/esterilizacion.jpg",
+                resumen: "Aún hay cupos disponibles. Inscríbete en las oficinas del GAD.",
+                contenido: `
+      <p>🐕 🐱</p>
+      <p>El Gad Parroquial informa a la colectividad que aún tenemos <strong>cupos disponibles</strong> para la jornada gratuita de esterilización de mascotas.</p>
+      <p><strong>Inscríbete</strong> en las oficinas del Gad.</p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "ambato-vive-2026",
+                titulo: "AMBATO VIVE 2026: Feria productiva del centro del país",
+                categoria: "Producción",
+                imagen: "assets/news/enero-2026/feriaGanadera.jpg",
+                resumen: "Tres días de diversión, innovación y tradición: 30, 31 y 1 de febrero.",
+                contenido: `
+      <p>🎉✨ ¡Ya llega la mejor feria productiva del centro del país <strong>AMBATO VIVE 2026</strong>!</p>
+      <p>Prepárate para vivir tres días llenos de diversión, innovación y tradición este <strong>30, 31 y 1 de febrero</strong>.🌱🐄</p>
+      <ul>
+        <li>🌟 Atracciones increíbles</li>
+        <li>🐄 La emocionante Elección de la Vaca Suprema</li>
+        <li>🐎 Juzgamiento Equino</li>
+        <li>🐰 Especies menores</li>
+        <li>🎡 Actividades para toda la familia y mucho más</li>
+      </ul>
+      <p>¡No te la puedes perder! La feria que mueve al país… está por comenzar. 🚀🌾</p>
+      <p><strong>¡LES ESPERAMOS!</strong></p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "calle-california",
+                titulo: "Apertura a doble vía de la calle California (Av. Atahualpa – Indiana)",
+                categoria: "Infraestructura",
+                imagen: "assets/news/enero-2026/atahualpa.jpg",
+                resumen: "Obra para dar solución al congestionamiento vial en el casco central.",
+                contenido: `
+      <p>El Gad Huachi Grande se complace en informar a la colectividad que el día de hoy en coordinación con el GAD Municipalidad de Ambato se iniciaron los trabajos de apertura a doble vía de la <strong>calle California</strong> en el tramo que va desde la <strong>Av. Atahualpa</strong> hasta la <strong>calle Indiana</strong>.</p>
+      <p>Esta emblemática obra se la ejecuta gracias al presupuesto participativo municipal que le corresponde a nuestra parroquia, además de la buena predisposición de nuestra alcaldesa la <strong>Ing. Diana Caiza</strong> y su equipo de trabajo.</p>
+      <p>Solicitamos a la ciudadanía tomar vías alternas y las precauciones debidas del caso.</p>
+      <p><strong>HUACHI GRANDE QUEREMOS VERTE MEJOR 💛💚🤍</strong></p>
+    `,
+                fecha: "Enero 2026"
+            },
+            {
+                id: "brilla-mujer-cierre",
+                titulo: "Cierre del Proyecto “Brilla Mujer”",
+                categoria: "Producción",
+                imagen: "assets/news/enero-2026/brillaMujer.jpg",
+                resumen: "Proyecto enfocado en fortalecer destrezas de mujeres emprendedoras con temáticas navideñas.",
+                contenido: `
+      <p>El Proyecto <strong>"Brilla Mujer"</strong>, un espacio enfocado a fortalecer los conocimientos y destrezas de las mujeres emprendedoras de nuestra parroquia ha llegado a felíz término con la participación de mujeres de diferentes sectores y barrios.</p>
+      <p>A través de este espacio buscamos proyectar en el grupo una visión para generación de ingresos familiares por medio de la aplicación de sus conocimientos en diferentes trabajos decorativos con temáticas navideñas.</p>
+      <p>Más que nada dejar en sus mentes que <strong>todo lo que se desea es posible</strong>.</p>
+      <p><strong>Huachi Grande queremos verte mejor 💛💚🤍</strong></p>
+    `,
+                fecha: "Enero 2026"
+            },
         ];
 
-
-        // === Render de cards ===
+        // === Render / filtros / paginación ===
         const grid = document.getElementById('newsGrid');
         const FALLBACK_IMG = "assets/news/placeholder.jpg";
+
+        const monthTabs = document.getElementById('monthTabs');
+        const monthHint = document.getElementById('monthHint');
+        const loadMoreWrap = document.getElementById('loadMoreWrap');
+        const btnLoadMore = document.getElementById('btnLoadMore');
+
+        // Estados
+        let selectedCat = 'Todas';
+        let selectedMonth = 'Todos';
+        let visibleLimit = 9;
+
+        function parseMonthKey(fecha) {
+            // "Enero 2026" -> "2026-01"
+            // "Noviembre 2025" -> "2025-11"
+            // "Octubre 2025" -> "2025-10"
+            const map = {
+                "Enero": "01",
+                "Febrero": "02",
+                "Marzo": "03",
+                "Abril": "04",
+                "Mayo": "05",
+                "Junio": "06",
+                "Julio": "07",
+                "Agosto": "08",
+                "Septiembre": "09",
+                "Octubre": "10",
+                "Noviembre": "11",
+                "Diciembre": "12",
+            };
+            const parts = (fecha || "").trim().split(" ");
+            if (parts.length < 2) return "0000-00";
+            const m = map[parts[0]] || "00";
+            const y = parts[1] || "0000";
+            return `${y}-${m}`;
+        }
+
+        // Agrega monthKey interno para ordenar y tabs
+        NEWS.forEach(n => n.monthKey = parseMonthKey(n.fecha));
+
+        // Ordena por más reciente (YYYY-MM desc)
+        const NEWS_SORTED = [...NEWS].sort((a, b) => (b.monthKey || "").localeCompare(a.monthKey || ""));
 
         function safeImgTag(src, alt, className) {
             return `<img src="${src}" class="${className}" alt="${alt}"
@@ -373,18 +527,50 @@
           </div>
         </div>`;
         }
-        function renderCards(list = NEWS) {
-            grid.innerHTML = list.map(cardTemplate).join('');
+
+        function getFilteredList() {
+            let list = NEWS_SORTED;
+
+            // Filtro por mes
+            if (selectedMonth !== 'Todos') {
+                list = list.filter(n => n.fecha === selectedMonth);
+            }
+
+            // Filtro por categoría
+            if (selectedCat !== 'Todas') {
+                list = list.filter(n => n.categoria === selectedCat);
+            }
+
+            return list;
+        }
+
+        function renderCards() {
+            const list = getFilteredList();
+            const page = list.slice(0, visibleLimit);
+
+            // Render cards
+            grid.innerHTML = page.map(cardTemplate).join('');
+
             // Wire buttons
             grid.querySelectorAll('[data-open]').forEach(btn => {
                 btn.addEventListener('click', (e) => openNews(e.currentTarget.getAttribute('data-open')));
             });
+
+            // Mostrar / ocultar "Ver más"
+            if (list.length > visibleLimit) {
+                loadMoreWrap.style.display = 'block';
+            } else {
+                loadMoreWrap.style.display = 'none';
+            }
+
+            // Hint solo cuando "Todos" (general)
+            monthHint.style.display = (selectedMonth === 'Todos' && selectedCat === 'Todas') ? 'block' : 'none';
         }
-        renderCards();
 
         // === Modal ===
         const modalEl = document.getElementById('newsModal');
         const modal = new bootstrap.Modal(modalEl);
+
         function openNews(id) {
             const n = NEWS.find(x => x.id === id);
             if (!n) return;
@@ -401,6 +587,42 @@
             modal.show();
         }
 
+        // === Tabs por mes ===
+        function buildMonthTabs() {
+            // Meses únicos ordenados desc (más recientes primero)
+            const months = Array.from(new Set(NEWS_SORTED.map(n => n.fecha)))
+                .filter(Boolean)
+                .sort((a, b) => parseMonthKey(b).localeCompare(parseMonthKey(a)));
+
+            const all = ['Todos', ...months];
+
+            monthTabs.innerHTML = all.map((m, idx) => {
+                const isActive = (m === 'Todos');
+                const cls = isActive ? "text-bg-success border-0" : "text-bg-light border";
+                const label = (m === 'Todos') ? `<i class="bi bi-calendar3"></i> Todos` : `<i class="bi bi-calendar-event"></i> ${m}`;
+                return `<span class="badge rounded-pill ${cls} month-pill" data-month="${m}">${label}</span>`;
+            }).join('');
+
+            monthTabs.querySelectorAll('.month-pill').forEach(p => {
+                p.addEventListener('click', () => {
+                    // estilos
+                    monthTabs.querySelectorAll('.month-pill').forEach(x => {
+                        x.classList.remove('text-bg-success', 'border-0');
+                        x.classList.add('text-bg-light', 'border');
+                    });
+                    p.classList.remove('text-bg-light', 'border');
+                    p.classList.add('text-bg-success', 'border-0');
+
+                    selectedMonth = p.getAttribute('data-month');
+                    visibleLimit = 9; // reset límite al cambiar tab
+                    renderCards();
+                    window.scrollTo({ top: document.querySelector('.page-hero').offsetHeight - 20, behavior: 'smooth' });
+                });
+            });
+        }
+
+        buildMonthTabs();
+
         // === Filtro por categoría ===
         const pills = document.querySelectorAll('.cat-pill');
         pills.forEach(p => p.addEventListener('click', () => {
@@ -410,16 +632,22 @@
             p.classList.remove('text-bg-light', 'border');
             p.classList.add('text-bg-success', 'border-0');
 
-            const cat = p.getAttribute('data-cat');
-            if (cat === 'Todas') {
-                renderCards(NEWS);
-            } else {
-                renderCards(NEWS.filter(n => n.categoria === cat));
-            }
+            selectedCat = p.getAttribute('data-cat');
+            visibleLimit = 9; // reset límite al cambiar categoría
+            renderCards();
             window.scrollTo({ top: document.querySelector('.page-hero').offsetHeight - 20, behavior: 'smooth' });
         }));
 
-        // (Opcional) abrir por hash ?id=…
+        // === Ver más (paginación simple) ===
+        btnLoadMore.addEventListener('click', () => {
+            visibleLimit += 9;
+            renderCards();
+        });
+
+        // Primera carga (limita a 9 en general)
+        renderCards();
+
+        // (Opcional) abrir por query ?id=…
         const params = new URLSearchParams(location.search);
         if (params.has('id')) {
             setTimeout(() => openNews(params.get('id')), 300);
