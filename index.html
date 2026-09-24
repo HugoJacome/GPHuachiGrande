@@ -651,6 +651,423 @@
   </section>
 
   <!-- Delegado de Protección de Datos Personales -->
+  <!-- ===== Acceso a la Información Pública (LOTAIP) ===== -->
+  <style>
+    .ai-section {
+      position: relative;
+      padding: 55px 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 193, 7, .16), transparent 34%),
+        linear-gradient(135deg, #f4fff7 0%, #eef8f0 48%, #ffffff 100%);
+      overflow: hidden;
+    }
+
+    .ai-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(25, 135, 84, .04) 1px, transparent 1px),
+        linear-gradient(rgba(25, 135, 84, .04) 1px, transparent 1px);
+      background-size: 42px 42px;
+      pointer-events: none;
+    }
+
+    .ai-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffc107;
+      color: #173b25;
+      font-weight: 700;
+      font-size: .84rem;
+      padding: 9px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .ai-title {
+      color: #16864f;
+      font-size: clamp(1.9rem, 2.6vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .ai-lead {
+      color: #5d6570;
+      font-size: 1.02rem;
+      line-height: 1.75;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .ai-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px 22px;
+      border: 1px solid rgba(25, 135, 84, .12);
+      border-top: 5px solid #16864f;
+      box-shadow: 0 10px 30px rgba(16, 80, 49, .07);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .ai-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(16, 80, 49, .13);
+    }
+
+    .ai-card .ai-ico {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #16864f, #1fa463);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    .ai-card h3 {
+      color: #1d2b24;
+      font-weight: 800;
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .ai-card p {
+      color: #5a626d;
+      font-size: .94rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ai-card.ai-card-amber {
+      border-top-color: #ffc107;
+    }
+
+    .ai-card.ai-card-amber .ai-ico {
+      background: linear-gradient(135deg, #f0ad00, #ffc107);
+      color: #173b25;
+    }
+
+    .ai-steps {
+      margin-top: 34px;
+      background: #fff;
+      border-radius: 26px;
+      padding: 30px;
+      border: 1px solid rgba(25, 135, 84, .12);
+      box-shadow: 0 14px 38px rgba(16, 80, 49, .09);
+    }
+
+    .ai-steps h3 {
+      color: #16864f;
+      font-weight: 800;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .ai-steps .ai-steps-sub {
+      color: #5d6570;
+      font-size: .96rem;
+      margin-bottom: 22px;
+    }
+
+    .ai-step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ai-step {
+      background: #f7fbf8;
+      border-radius: 18px;
+      padding: 22px 18px;
+      border: 1px solid rgba(25, 135, 84, .12);
+    }
+
+    .ai-step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #16864f;
+      color: #fff;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .ai-step h6 {
+      color: #1d2b24;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .ai-step p {
+      color: #5a626d;
+      font-size: .92rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ai-step ul {
+      color: #5a626d;
+      font-size: .92rem;
+      line-height: 1.6;
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .ai-note {
+      margin-top: 22px;
+      background: linear-gradient(135deg, #16864f, #1fa463);
+      color: #fff;
+      border-radius: 18px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 12px 28px rgba(22, 134, 79, .18);
+    }
+
+    .ai-note i {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .ai-note p {
+      margin: 0;
+      line-height: 1.6;
+      font-size: .97rem;
+    }
+
+    .ai-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .ai-btn {
+      background: #16864f;
+      color: #fff;
+      border-radius: 14px;
+      padding: 13px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(22, 134, 79, .20);
+      transition: all .25s ease;
+    }
+
+    .ai-btn:hover {
+      background: #0f6f40;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .ai-btn-outline {
+      color: #16864f;
+      background: #fff;
+      border: 1px solid rgba(22, 134, 79, .35);
+      border-radius: 14px;
+      padding: 13px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .25s ease;
+    }
+
+    .ai-btn-outline:hover {
+      background: #eef8f1;
+      color: #0f6f40;
+    }
+
+    .ai-legal {
+      text-align: center;
+      color: #7a828c;
+      font-size: .84rem;
+      margin-top: 18px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991px) {
+      .ai-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ai-step-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-steps {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .ai-section {
+        padding: 42px 0;
+      }
+
+      .ai-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-note {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .ai-actions {
+        flex-direction: column;
+      }
+
+      .ai-btn,
+      .ai-btn-outline {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <section id="acceso-informacion" class="ai-section">
+    <div class="container">
+
+      <div class="text-center">
+        <span class="ai-badge">
+          <i class="bi bi-search"></i>
+          Transparencia y Acceso a la Información
+        </span>
+        <h1 class="ai-title">La información pública es tu derecho</h1>
+        <p class="ai-lead">
+          La <strong>Ley Orgánica de Transparencia y Acceso a la Información Pública (LOTAIP)</strong> obliga a las
+          instituciones del sector público a publicar y entregar información a la ciudadanía, y al mismo tiempo
+          dispone que los sujetos obligados <strong>protejan los datos personales</strong>. El GAD Parroquial Rural de
+          Huachi Grande cumple con ambos deberes.
+        </p>
+      </div>
+
+      <div class="ai-grid">
+
+        <div class="ai-card">
+          <div class="ai-ico"><i class="bi bi-megaphone"></i></div>
+          <h3>Transparencia activa</h3>
+          <p>Es la información que la institución publica de oficio, sin que nadie la pida: presupuestos, obras,
+            remuneraciones, contratos y rendición de cuentas.</p>
+        </div>
+
+        <div class="ai-card">
+          <div class="ai-ico"><i class="bi bi-envelope-paper"></i></div>
+          <h3>Transparencia pasiva</h3>
+          <p>Es la obligación de responder a las <strong>Solicitudes de Acceso a la Información Pública (SAIP)</strong>
+            que presente cualquier persona, sin necesidad de justificar para qué la quiere.</p>
+        </div>
+
+        <div class="ai-card">
+          <div class="ai-ico"><i class="bi bi-people"></i></div>
+          <h3>Transparencia colaborativa y focalizada</h3>
+          <p>Es la información que se construye y difunde junto con la ciudadanía, y la que se entrega de forma
+            sencilla a grupos concretos según sus necesidades.</p>
+        </div>
+
+        <div class="ai-card ai-card-amber">
+          <div class="ai-ico"><i class="bi bi-shield-lock"></i></div>
+          <h3>Tus datos están protegidos</h3>
+          <p>Entregar información pública no significa exponer a las personas. Los datos personales y la información
+            confidencial se protegen conforme a la Ley Orgánica de Protección de Datos Personales.</p>
+        </div>
+
+      </div>
+
+      <div class="ai-steps">
+        <h3>¿Cómo pedir información al GAD Parroquial?</h3>
+        <p class="ai-steps-sub">Cualquier persona puede solicitarla. El trámite es gratuito y no necesita abogado.</p>
+
+        <div class="ai-step-grid">
+
+          <div class="ai-step">
+            <div class="ai-step-num">1</div>
+            <h6>Prepare su solicitud</h6>
+            <ul>
+              <li>Sus nombres y apellidos.</li>
+              <li>Un medio de contacto para recibir la respuesta (correo, teléfono o dirección).</li>
+              <li>Descripción precisa de la información que necesita.</li>
+              <li>Si la quiere en formato digital o impreso.</li>
+            </ul>
+          </div>
+
+          <div class="ai-step">
+            <div class="ai-step-num">2</div>
+            <h6>Preséntela al GAD</h6>
+            <p>Puede entregarla en la Secretaría del GAD Parroquial Rural de Huachi Grande, dirigida a la máxima
+              autoridad, o enviarla al correo institucional
+              <a href="mailto:gphuachigrande@hotmail.com">gphuachigrande@hotmail.com</a>.
+            </p>
+          </div>
+
+          <div class="ai-step">
+            <div class="ai-step-num">3</div>
+            <h6>Reciba la respuesta</h6>
+            <p>La institución responde en un plazo de <strong>diez (10) días</strong>, que puede prorrogarse por
+              <strong>cinco (5) días</strong> más cuando exista una justificación, la cual se le comunicará
+              oportunamente.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="ai-note">
+          <i class="bi bi-info-circle"></i>
+          <p>
+            <strong>Recuerde:</strong> la solicitud requiere su identificación y un medio de contacto. Estos datos
+            deben registrarse únicamente en los campos correspondientes y <strong>no repetirse en la descripción</strong>
+            de la información que solicita, para proteger su privacidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="ai-actions">
+        <a href="mailto:gphuachigrande@hotmail.com" class="ai-btn">
+          <i class="bi bi-envelope"></i>
+          Solicitar información
+        </a>
+        <a href="transparencia-2026.html" class="ai-btn-outline">
+          <i class="bi bi-folder2-open"></i>
+          Ver transparencia del GAD
+        </a>
+        <a href="https://transparencia.dpe.gob.ec/entidades/659" target="_blank" rel="noopener"
+          class="ai-btn-outline">
+          <i class="bi bi-box-arrow-up-right"></i>
+          Portal Nacional de Transparencia
+        </a>
+      </div>
+
+      <p class="ai-legal">
+        Ley Orgánica de Transparencia y Acceso a la Información Pública (LOTAIP) · Ley Orgánica de Protección de Datos
+        Personales · Entidad rectora: Defensoría del Pueblo del Ecuador.
+      </p>
+
+    </div>
+  </section>
+
   <section id="delegado-datos" class="container my-5">
     <div class="card border-0 shadow-sm">
       <div class="card-body p-4">
